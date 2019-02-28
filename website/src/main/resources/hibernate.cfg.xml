@@ -5,10 +5,10 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost::8181/website</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/website</property>
 		<property name="hibernate.connection.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password">admin</property>
+		<property name="hibernate.connection.password"></property>
 		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
 		
 		<!-- JDBC connection pool settings -->
@@ -24,6 +24,7 @@
 		<!-- <mapping resource="com/website/hibernate/Student.hbm.xml"></mapping> -->	
 		
 		<!-- Using for annotation -->
-		<!-- <mapping class="com.website.hibernate.entities.Student"></mapping> -->
+		<mapping class="com.website.hibernate.entities.Student"></mapping>
+		<mapping class="com.website.hibernate.entities.Address"></mapping>
 	</session-factory>
 </hibernate-configuration>
