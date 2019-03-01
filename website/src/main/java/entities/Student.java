@@ -1,4 +1,4 @@
-package com.website.hibernate.entities;
+package entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,11 +6,15 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import static javax.persistence.GenerationType.IDENTITY;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -36,6 +40,17 @@ public class Student implements java.io.Serializable{
 	@JoinColumn(name="ADDRESS_ID")
 	private Address address;
 	
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(
+			name = "STUDENT_COURSE", 
+			joinColumns = { @JoinColumn(name = "STUDENT_ID")}, 
+			inverseJoinColumns = { @JoinColumn(name = "COURSE_ID")}
+			)	
+	private List<Course> courses;
+	
+	@ManyToOne
+	@JoinColumn(name="CLAZZ_ID", nullable=false)
+	private Clazz clazz;
 	
 	public Long getId() {
 		return id;
@@ -76,5 +91,19 @@ public class Student implements java.io.Serializable{
 	public void setAddress(Address address){
 		this.address = address;
 	}
+	public List<Course> getCourses() {
+		return courses;
+	}
+	public void setCourses(List<Course> courses) {
+		this.courses = courses;
+	}
+	public Clazz getClazz() {
+		return clazz;
+	}
+	public void setClazz(Clazz clazz) {
+		this.clazz = clazz;
+	}
+	
+	
 	
 }

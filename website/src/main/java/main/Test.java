@@ -1,10 +1,10 @@
-package com.website.hibernate.main;
+package main;
 
 import org.hibernate.classic.Session;
 
-import com.website.hibernate.entities.Address;
-import com.website.hibernate.entities.Student;
-import com.website.hibernate.persistence.HibernateUtil;
+import entities.Address;
+import entities.Student;
+import persistence.HibernateUtil;
 
 
 public class Test {
@@ -28,9 +28,9 @@ public class Test {
 		student.setAddress(address);
 		session.save(student);
 		
-
-		
 		session.getTransaction().commit();
 	}
+	
+	
 
 }
