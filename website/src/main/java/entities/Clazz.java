@@ -30,7 +30,8 @@ public class Clazz implements Serializable {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "clazz", cascade=CascadeType.ALL)
 	private List<Student> students;
 
-	public Clazz() {			
+	public Clazz() {
+		
 	}
 
 	public Clazz(String name) {

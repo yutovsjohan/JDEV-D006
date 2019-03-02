@@ -52,6 +52,19 @@ public class Student implements java.io.Serializable{
 	@JoinColumn(name="CLAZZ_ID", nullable=false)
 	private Clazz clazz;
 	
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Student(String firstName, String lastName, Integer age, Address address, Clazz clazz) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.address = address;
+		this.courses = courses;
+		this.clazz = clazz;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -104,6 +117,10 @@ public class Student implements java.io.Serializable{
 		this.clazz = clazz;
 	}
 	
-	
+	public String toString() {
+		return String.format("{id:%s,firstName:%s,lastName:%s,age:%s,address:%s}", id, firstName, lastName, age,
+				address.toString());
+	}
+
 	
 }

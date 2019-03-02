@@ -22,6 +22,17 @@ public class Course implements Serializable{
 	@Column(name = "COURSE_NAME", length = 100)
 	private String courseName;
 
+
+	public Course() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Course(String courseName) {
+		super();
+		this.courseName = courseName;
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -38,5 +49,8 @@ public class Course implements Serializable{
 		this.courseName = courseName;
 	}
 	
+	public String toString() {
+		return String.format("{id: %s, name: %s}", id, courseName);
+	}
 	
 }

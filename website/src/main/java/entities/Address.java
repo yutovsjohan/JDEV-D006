@@ -28,6 +28,19 @@ public class Address implements Serializable{
 	@Column(name = "city", length = 100)
 	private String city;
 	
+	
+	public Address() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Address(String street, String district, String city) {
+		super();
+		this.street = street;
+		this.district = district;
+		this.city = city;
+	}
+	
 	public long getId() {
 		return id;
 	}
@@ -53,5 +66,8 @@ public class Address implements Serializable{
 		this.city = city;
 	}
 	
+	public String toString(){
+		return String.format("{id:%s,street:%s,district:%s,city:%s}", id, street, district, city);
+	}
 	
 }

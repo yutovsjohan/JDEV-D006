@@ -24,9 +24,9 @@
 		<!-- <mapping resource="com/website/hibernate/Student.hbm.xml"></mapping> -->	
 		
 		<!-- Using for annotation -->
-		<mapping class="com.website.hibernate.entities.Student"></mapping>
-		<mapping class="com.website.hibernate.entities.Address"></mapping>
-		<mapping class="com.website.hibernate.entities.Course"></mapping>
-		<mapping class="com.website.hibernate.entities.Clazz"></mapping>
+		<mapping class="entities.Student"></mapping>
+		<mapping class="entities.Address"></mapping>
+		<mapping class="entities.Course"></mapping>
+		<mapping class="entities.Clazz"></mapping>
 	</session-factory>
 </hibernate-configuration>
