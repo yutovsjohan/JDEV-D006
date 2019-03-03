@@ -33,7 +33,7 @@ public class AddressDAO extends EntityDAO<Address> {
 		try {
 			session.getTransaction().begin();
 			Criteria criteria = session.createCriteria(Address.class);
-			Address result = (Address)criteria.add(Restrictions.idEq(id));
+			Address result = (Address)criteria.add(Restrictions.idEq(id)).uniqueResult();
 			session.getTransaction().commit();
 			
 			return result;
