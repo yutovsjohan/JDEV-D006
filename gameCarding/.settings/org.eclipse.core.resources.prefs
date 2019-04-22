@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/controller/BattleServlet.java=UTF-8
+encoding//src/controller/moveServlet.java=UTF-8
+encoding//src/controller/pkmServlet.java=UTF-8
+encoding//src/controller/playerServlet.java=UTF-8
+encoding//src/model/moveModel.java=UTF-8
+encoding//src/model/pkmModel.java=UTF-8
+encoding//src/model/playerModel.java=UTF-8
+encoding//src/model/statModel.java=UTF-8
